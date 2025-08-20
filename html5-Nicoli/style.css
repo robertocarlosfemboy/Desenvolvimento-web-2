@@ -1,0 +1,49 @@
+.foto{
+    margin-left: 14.5%;
+}
+.menu{
+    display: inline;
+    width: 20%;
+}
+body{
+    color: white;
+    background-color: black;
+    li::marker{
+    color: rgb(170, 234, 255);
+    }
+}
+.menu1{
+    display: flex;
+}
+.conteiner{
+    display: flex;
+
+}
+.bloco1{
+    margin-top: 2%;
+    margin-left: 2%;
+    width: 50%;
+}
+.bloco2{
+    margin-top: 2%;
+    margin-left: 2.5%;
+    width: 50%;
+}
+.imagens{
+    display: flex;
+    border: white;
+}
+
+.linhas{
+    display: inline;
+}
+.fotos1{
+    display: flex;
+    width: 10px;
+    height: 10px;
+}
+.fotos2{
+    display: flex;
+    width: 10px;
+    height: 10px;
+}

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>ChatGPT dos pobres</title>
+        <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+        <style>
+            .titulo{
+                display: flex;
+            }
+            body{
+                background-color: black;
+                color: white;
+            }
+            .central{
+                margin-left: 28%;
+                margin-right: 28%;
+            }
+            li::marker{
+                color: pink;
+            }
+            .resposta{
+                border: white;
+                margin-left: 10%;
+                margin-right: 10%;
+                margin-top: 10%;
+                margin-bottom: 10%;
+            }
+            p{
+                text-align: justify;
+            }
+            .conclusao{
+                margin-top: 7%;
+            }
+            .espaco{
+                margin-bottom: 30%;
+            }
+        </style>
+    </head>
+    <!--Maria e Nicoli-->
+    <body>
+        <div class="central">
+            <div class="titulo">
+                <h1 style="font-family: 'Times New Roman', Times, serif; font-size: 550%">ChatGPT</h1><h1 style="margin-left: 6px; font-family:'Lobster'; font-size: 500%">dos pobres</h1>
+            </div>
+            <form id="pergunte">
+                <label for="valor1" style="font-size: 200%; margin-left: 7%;">Qual desses assuntos você deseja saber mais?</label><br>
+                <p><ul>
+                    <li style="font-size: 120%; margin-left: 31%;">Computação na nuvem;</li>
+                    <li style="font-size: 120%; margin-left: 31%;">Infraestrutura de TI;</li>
+                    <li style="font-size: 120%; margin-left: 31%;">SaaS;</li>
+                    <li style="font-size: 120%; margin-left: 31%;">PaaS;</li>
+                    <li style="font-size: 120%; margin-left: 31%;">IaaS;</li>
+                    <li style="font-size: 120%; margin-left: 31%;">Virtualização.</li></ul></p>
+                <input type="text" id="valor1" style="font-size: large; margin-left: 27%;" required>
+                <button type="submit" style="font-size: large;">Enter</button>
+
+                <div class="conclusao">
+                    <p id="resposta"></p>
+                </div>
+                
+                <div class="espaco"></div>
+
+                <script>
+                    const form = document.getElementById('pergunte');
+                    const resposta = document.getElementById('resposta');
+                    form.addEventListener('submit', function(event){
+                        event.preventDefault();             
+
+                        var opcao = document.getElementById('valor1').value;                      
+                        switch(opcao){
+                            case "Computação na nuvem":
+                                resposta.innerHTML="<h3>Para saber o que é &#34;Computação na Nuvem&#34;, é necessário explicar o termo &#34;Nuvem&#34;:</h3><p>'Nuvem' é um servidor de armanezamento de dados que guarda e processa informações ao transferi-las pela Internet. Vale ressaltar que há mais de um tipo de servidor de armanezamento: público, privado e híbrido; e 'Computação na Nuvem' apenas envolve essas ferramentas.</p><p>Agora que já sabemos o que é a 'Nuvem' de um servidor, fica mais fácil de explicar o que é a 'Computação na Nuvem': É um modelo de fornecimentos de serviços de TI via internet, onde quem o utiliza paga apenas pelos recursos que consome, o que reduz custos operacionais, permite escalar conforme a demanda e traz mais agilidade e eficiência operacional! Como já da para deduzir, esse serviço reduz o custo pois elimina a necessidade de GRANDES investimentos em hardware, software e infraestrutura de data center; diminui o tempo gasto com tarefas administrativas como configuração de hardware ou manutenção; e provedores de nuvem operam centros de dados distribuídos globalmente, possibilitando entrega de serviços com baixa latência e alta disponibilidade.</p><p>Exemplos de sistemas que fazem uso de Computação na Nuvem:<ul><li>Serviços de streaming;</li><li>Gmail;</li><li>Google Drive;</li><li>Microsoft OneDrive.</li></ul></p><p>Os modelos de serviço da Nuvem são: IaaS, PaaS e SaaS. Se quiser saber sobre eles, é só &#34;teclar&#34;!</p>";
+                                break;   
+                            case "Infraestrutura de TI":
+                                resposta.innerHTML="<h3>Para saber o que é Infraestrutura de TI, é necessário explicar primeiro o termo TI:</h3><p>Tecnologia da Informação é o conjunto de recursos tecnológicos usados para coletar, armazenar, processar e distribuir informações em uma organização. Em resumo: é tudo aquilo que dá suporte digital para empresas, desde os computadores até os sistemas que elas utilizam no dia a dia.</p> <h4>Agora que já entendemos o que é TI, fica mais fácil de explicar o que é Infraestrutura de TI: </h4>Ela é a base que sustenta toda a tecnologia de uma empresa. Inclui hardware, software, redes e até segurança. <br>Como você já deve imaginar, sem uma infraestrutura de TI bem montada, nada funciona direito: não tem internet estável, os sistemas caem, os dados ficam vulneráveis e a empresa perde produtividade. </p><p>Exemplos de provedores de Infraestrutura de TI:<ul><li>Amazon Web Services (AWS);</li><li>Microsoft Azure;</li><li>Google Cloud.</li></ul></p><p>Os modelos de serviço da Nuvem são: IaaS, PaaS e SaaS. Se quiser saber sobre eles, é só &#34;teclar&#34;!</p>                ";
+                                break;
+                            case "SaaS":
+                                resposta.innerHTML="<p>'SaaS' é a abreviação de 'Software as a Service'. É um modelo de software baseado em nuvem. Ele permite que o usuário acesse o software pela Internet através de uma assinatura ao invés de instalá-lo na máquina, o acessando pelo navegador ou por um app, onde a segurança e as atualizações são gerenciadas pelo provedor! </p><p>Essa ferramenta simplifica a manutenção e a gestão, reduzindo custos iniciais de TI, já que substitui o software tradicional que é instalado após a compra da licença.</p><p>Exemplos de sistemas SaaS:<ul><li>Google Workspace;</li><li>Microsoft 365.</li></ul></p>Além desse, há outros modelos de serviço de Nuvem, como o IaaS e o PaaS. Se quiser saber sobre eles, é só &#34;teclar&#34;!</p>";
+                                break;
+                            case "PaaS":
+                                resposta.innerHTML="<p>'PaaS' é a abreviação de 'Platform as a Service'. É um modelo de software baseado em nuvem que oferece uma plataforma completa para desenvolvedores compilarem, implantarem e gerenciarem aplicações sem necessidade de lidar com a infraestrutura. Nesse sistema, o provedor disponibiliza uma plataforma já com infraestrutura, ferramentas, bibliotecas, APIs, SDKs, sistemas de runtime e interfaces; tudo sendo entregue via nuvem.</p><p>Nele, os desenvolvedores podem escrever, testar e implantar seu código diretamente, focando na aplicação em si, enquanto o provedor gerencia o resto; fornecendo tudo o que é necessário para desenvolver, implantar, executar e gerenciar aplicativos, sem precisar atualizar sistemas operacionais, ferramentas de desenvolvimento ou manter um hardware físico.</p><p>Outro benefício é que equipes separadas podem acessar tudo via internet, facilitando o trabalho conjunto!</p><p>Exemplos de sistemas PaaS:<ul><li>AWS Elastic Beanstalk;</li><li>Microsoft Azure App Service;</li><li>Google App Engine.</li></ul></p><p>Além desse, há outros modelos de serviço de Nuvem, como o IaaS e o SaaS. Se quiser saber sobre eles, é só &#34;teclar&#34;!</p>";
+                                break;
+                            case "IaaS":
+                                resposta.innerHTML="<p>'IaaS' é a abreviação de 'Infrastructure as a Service'. É um modelo de software baseado em nuvem onde você aluga recursos de infraestrutura de um provedor de nuvem e paga conforme o seu consumo. </p><p>Com isso, as empresas podem migrar sua infraestrutura para nuvens públicas, privadas ou híbridas, sem precisar investir em hardware ou gestão de data centers, reduzindo os custos iniciais, propondo menor preocupação operacional e ajustando recursos conforme a demanda</p><p>Exemplos de sistemas Iaas:<ul><li>Amazon Web Services (AWS);</li><li>Microsoft Azure;</li><li>Google Cloud Platform (GCP).</li></ul></p><p>Além desse, há outros modelos de serviço de Nuvem, como o PaaS e o SaaS. Se quiser saber sobre eles, é só &#34;teclar&#34;!</p>";
+                                break;
+                            case "Virtualização":
+                                resposta.innerHTML="<h3>Para saber o que é &#34;Virtualização em Nuvem&#34;, é necessário explicar o termo &#34;Nuvem&#34;:</h3><p>'Nuvem' é um servidor de armanezamento de dados que guarda e processa informações ao transferi-las pela Internet. Vale ressaltar que há mais de um tipo de servidor de armanezamento: público, privado e híbrido; e 'Virtualização em Nuvem' também tem diversos tipos: Virtualização de servidor, desktop, rede e armazenamento.</p><h4>Agora que já sabemos o que é a 'Nuvem' de um servidor, fica mais fácil de explicar o que é a 'Virtualização em Nuvem': </h4><p>A virtualização permite criar versões virtuais de componentes físicos como: hardware, servidores, armazenamento ou redes, possibilitando, assim, a execução de vários sistemas isolados a partir de um único recurso físico. Isso transforma um servidor real em múltiplos servidores virtuais, o que otimiza o uso de hardware e facilita a gestão e segurança.</p><p>Esse serviço permite que diferentes cargas de trabalho operem isoladas utilizando o mesmo hardware, garantindo isolamento entre sistemas, além de, é claro, criar, remover ou ajustar servidores virtuais conforme a demanda, reduzindo custos operacionais.</p><p>Exemplos de sistemas que fazem uso de Virtualização em Nuvem:<ul><li>Amazon Web Services;</li><li>Azure;</li><li>Dropbox;</li><li>One Drive.</li></ul></p><p>Os modelos de serviço da Nuvem são: IaaS, PaaS e SaaS. Se quiser saber sobre eles, é só &#34;teclar&#34;!</p>";
+                                break;
+                            default:
+                                resposta.innerHTML="Ops, não conheço esse assunto &#x1F61E <br> Tente novamente.";
+                                break;
+                        }
+                    })
+                </script>
+            </form>
+        </div>
+    </body>
+</html>

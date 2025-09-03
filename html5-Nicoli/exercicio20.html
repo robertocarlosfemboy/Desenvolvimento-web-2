@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <style>
+            .selection{
+                display: none;
+                margin-top: 20px;
+            }
+            h3{
+                color: rgb(65, 194, 151);
+            }
+            h2{
+                color: rgb(32, 95, 74);
+            }
+            h1{
+                color: rgb(15, 54, 41);
+            }
+        </style>
+    </head>
+    <body>
+        <!--Maria e Nicoli-->
+        <!--Utilizando JavaScript, HTML e CSS, faça uma página web em que o usuário possa escolher uma das três opções (quadrado, triângulo
+        e círculo). Para cada opção deve ser aberto um formulário específico da figura, onde o usuário colocará os dados (lado, altura, 
+        base, raio) e terá o valor da área da figura apresentado na página.-->
+
+        <h1>Selecionador</h1>
+        <label for="selecionar">Escolha o que fazer</label>
+        <select id="selecionar" onchange="escolha()">
+            <option value="">Selecione</option>
+            <option value="quadrado">Quadrado</option>
+            <option value="triangulo">Triângulo</option>
+            <option value="circulo">Círculo</option>
+        </select>
+
+        <div id="quadrado" class="selection">
+            <h2>Quadrado</h2>
+            <label>Digite a lado: <input type="number" id="valorLado" required></label>
+            <button onclick="calcular()">OK</button>
+        </div>
+
+        <div id="triangulo" class="selection">
+            <h2>Triângulo</h2>
+            <label>Digite a base: <input type="number" id="valorBase" required></label><br>
+            <label>Digite a altura: <input type="number" id="valorAltura" required></label>
+            <button onclick="calcular()">OK</button>
+        </div>
+
+        <div id="circulo" class="selection">
+            <h2>Círculo</h2>
+            <label>Digite o raio: <input type="number" id="valorRaio" required></label>
+            <button onclick="calcular()">OK</button>
+        </div>
+
+        <h3 id="mostrar"></h3>
+
+        <script>
+        function escolha(){
+            const forma = document.getElementById('selecionar').value;
+
+            document.querySelectorAll('.selection').forEach(section =>{
+                section.style.display='none';
+            })
+
+            if(forma){
+                document.getElementById(forma).style.display='block';
+                document.getElementById(resultado).textContent='';
+            }
+        }
+
+        function calcular(){
+            const valor = document.getElementById('selecionar').value;
+            const mostrar = document.getElementById('mostrar');
+            var area = 0;
+            switch(valor){
+                case "quadrado":
+                    const lado = parseFloat(document.getElementById('valorLado').value);
+                    area = lado * lado;
+                    mostrar.innerText="A área do quadrado é: " + area;
+                    break;
+                case "triangulo":
+                    const base = parseFloat(document.getElementById('valorBase').value);
+                    const altura = parseFloat(document.getElementById('valorAltura').value);
+                    area = (base * altura) / 2;
+                    mostrar.innerText="A área do triângulo é: " + area;
+                    break;
+                case "circulo":
+                    const raio = parseFloat(document.getElementById('valorRaio').value);
+                    area = (raio * raio) * Math.PI;
+                    mostrar.innerText="A área do círculo é: " + area;
+                    break;
+            }
+        }
+    </script>
+
+    </body>
+</html>

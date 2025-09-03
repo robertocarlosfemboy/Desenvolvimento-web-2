@@ -1,0 +1,42 @@
+    <!DOCTYPE html>
+    <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Document</title>
+        </head>
+        <body>
+            <!--Maria e Nicoli-->
+            <!--Faça uma página HTML em que seja possível cadastrar todas as disciplinas do Curso Técnico em Desenvlvimento de Sistemas, mostrando 
+            uma depois da outra logo após o cadastro.-->
+
+            <h1>Cadastro de Diciplinas</h1>
+            <form id="formDiciplina">
+                <label for="nome">Nome da Diciplina:</label>
+                <input type="text" id="nome" required>
+                <button type="submit">Cadastrar</button>
+            </form>
+
+            <h2>Lista de Diciplinas</h2>
+            <ul id="listaDiciplina"></ul>
+
+            <script>
+                const form = document.getElementById("formDiciplina");
+                const lista = document.getElementById("listaDiciplina");
+
+                form.addEventListener("submit", function(event) {
+                event.preventDefault();
+
+                const nome = document.getElementById("nome").value;
+
+                const li = document.createElement("li");
+                li.textContent = `${nome}`;
+
+                lista.appendChild(li);
+
+                form.reset();
+                });
+            </script>
+
+        </body>
+    </html>

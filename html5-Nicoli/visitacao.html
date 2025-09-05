@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Visitação</title>
+        <link rel="stylesheet" href="style.css">
+        <style>     
+            .selection{
+                display: none;
+                margin-top: 5%;
+                margin-left: 45%;
+            }
+            .nomesVisitação{
+                margin-top: 20%;
+                display: inline;
+            }
+            .nome{
+                margin-top: 20%;
+                margin-left: 40%;
+            }
+            h1{
+                font-size: 250%;
+                color: #642b9c;
+            }
+            h2{
+                color: #642b9c;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="nome">
+            <form id="digiteNome">
+                <label for="nome"><h1>Olá, digite seu nome</h1></label><br>
+                <input type="text" id="nome" required>
+                <button type="submit">Veja o visitantes anteriores</button>
+            </form>
+        </div>
+        <div id="visitantes" class="selection">
+            <h2>Visitantes anteriores</h2>
+            <ul id="listaVisitantes"></ul>
+            <a href="exercicio13.html" target="_blank" style="font-size: 200%;">Ir para o site</a>
+        </div>
+        
+        
+            
+        <script>
+            const form = document.getElementById("digiteNome");
+            const lista = document.getElementById("listaVisitantes");
+            form.addEventListener("submit", function(event) {
+            event.preventDefault();
+
+            document.getElementById('visitantes').style.display='block';
+
+            const nome = document.getElementById("nome").value;
+
+            const li = document.createElement("li");
+            li.textContent = `${nome}`;
+
+            lista.appendChild(li);
+
+            form.reset();
+            });
+        </script>
+    </body>
+</html>

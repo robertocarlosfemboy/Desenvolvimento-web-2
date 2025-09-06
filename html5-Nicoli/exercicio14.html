@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Previsão do tempo</title>
+        <style>
+            h1{
+                font-size: 300%;
+            }
+            img{
+                width: 25%;
+            }
+            h2{
+                font-size: 17  5%;
+            }
+            .selection{
+                margin-top: 2%;
+            }
+        </style>
+    </head>
+    <body>
+        <!--Nicoli-->
+        <!--Faça um site de clima e receba uma temperatura e uma probabilidade de chuva. Dependendo da 
+        entrada de dados mostre uma figura, ex:30° e 30% de chance de chuva, mostra uma imagem de tempo
+        com o sol entre nuvens. Temperatura de -1 e chance de chuva de 70%, mostra uma imagem de neve.-->
+
+        <h1><center>Confira a previsão do tempo</center></h1>
+        <div class="dados">
+            <center>
+                <label for="temperatura">Digite a temperatura:</label>
+                <input type="text" id="temperatura" required>
+                <label for="chuva">Digite a probabilidade de chuva:</label>
+                <input type="text" id="chuva" required>
+                <br><br><button type="submit">Conferir</button>
+            <center>
+        </div>
+
+        <div id="nublado" class="selection">
+            <center>
+                <h2>Previsão de tempo: nublado</h2>
+                <p class="temperatura"></p>
+                <p class="chuva"></p>
+                <img src="imagens14/nublado.svg" alt="...">
+            </center>
+        </div>
+
+        <div id="chuva" class="selection">
+            <center>
+                <h2>Previsão de tempo: chuva</h2>
+                <p class="temperatura"></p>
+                <p class="chuva"></p>
+                <img src="imagens14/chuva.svg" alt="...">
+            </center>
+        </div>
+        
+        <div id="ensolarado" class="selection">
+            <center>
+                <h2>Previsão de tempo: ensolarado</h2>
+                <p class="temperatura"></p>
+                <p class="chuva"></p>
+                <img src="imagens14/ensolarado.svg" alt="...">
+            </center>
+        </div>
+
+        <div id="neve" class="selection">
+            <center>
+                <h2>Previsão de tempo: neve</h2>
+                <p class="temperatura"></p>
+                <p class="chuva"></p>
+                <img src="imagens14/neve.svg" alt="...">
+            </center>
+        </div>
+
+        <script> 
+            document.body.style.backgroundColor = "white";
+        </script>
+    </body>
+</html>
+<!--
+nublado - branco
+chuva - azul claro
+ensolarado - amarelo
+neve - cinzinha claro
+-->

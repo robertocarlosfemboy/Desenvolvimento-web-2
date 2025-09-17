@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Tudo sobre Alice in Borderland</title>
+        <style>
+            @font-face {
+                font-family: "f";
+                src: url('CloisterBlack.ttf') format('truetype');
+            }
+            body{
+                background-color: #c4c8bf;
+                margin-left: 2%;
+                margin-right: 2%;
+                margin-bottom: 4%;
+            }
+            header{
+                margin-bottom: 1.5%;
+                justify-items: center;
+            }
+            button{
+                height: 30px;
+                width: 240px;
+                margin-top: 1.5%;
+                background-color: #60110f;
+                border-color: #60110f;
+            }
+            p{
+                text-align: justify;
+                font-family: Georgia, 'Times New Roman', Times, serif;
+            }
+            h1 {
+                font-family: "f", serif;
+                font-size: 500%;
+            }
+            h3 {
+                font-family: "f", serif;
+            }
+            main{
+                margin-top: 2%;
+                display: flex;
+            }
+            section{
+                display: inline;
+                margin-right: 1%;
+                
+            }
+            .lateral{
+                margin-left: 1%;
+            }
+            footer{
+                margin-top: 3%;
+            }
+            .artigo2{
+                display: flex;
+            }
+            .container-hover {
+                position: relative; /* Importante para posicionar o texto oculto dentro */
+                display: inline-block; /* Para o contêiner se ajustar ao conteúdo */
+                padding: 10px;
+                cursor: pointer; /* Muda o cursor para indicar interatividade */
+            }
+
+            .texto-oculto {
+                display: none; /* O texto fica oculto por padrão */
+                position: absolute; /* Posiciona o texto sobre o contêiner */
+                background-color: #60110f;
+                padding: 5px;
+            }
+
+            .container-hover:hover .texto-oculto {
+                display: block; /* Exibe o texto quando o mouse estiver sobre o contêiner */
+            }
+        </style>
+    </head>
+    <body>
+        <header class="cabecalho">
+            <h1>Alice in Borderland</h1>
+            <p><b>Guia completo:</b></p><br>  
+            <nav class="navegacao">
+                <button><b style="color: #c4c8bf;">VISÃO GERAL</b></button>
+                <button><b style="color: #c4c8bf;">ELENCO</b></button>
+                <button><b style="color: #c4c8bf;">AVALIAÇÕES</b></button>
+                <button><b style="color: #c4c8bf;">TRAILERS</b></button>
+                <button><b style="color: #c4c8bf;">MANGÁS</b></button>
+            </nav> 
+        </header>
+        <hr>
+        <main class="conteudo">
+            <section class="secao">
+                <article class="artigo1">
+                    <h3>Sinopse</h3>
+                    <p style="text-indent: 2%;">Arisu, um jovem desiludido com a vida, é subitamente transportado com seus amigos para uma Tóquio paralela e deserta — um mundo chamado "Borderland". Lá, eles são forçados a participar de jogos mortais que testam suas habilidades físicas, mentais e emocionais. Cada jogo vencido garante dias de "visto", ou seja, tempo de vida. Quando o visto expira, a morte é certa. Ao lado da misteriosa Usagi, Arisu busca respostas sobre quem controla aquele mundo e como escapar dele — enquanto luta para sobreviver.</p><br>
+                    <h3>Origem da série</h3>
+                    <p style="text-indent: 2%;"></p>
+                </article>
+                <article class="artigo2">
+
+                    <aside class="transparente">
+                        <div class="container-hover">
+                            <img src="Imagens/33.jpg" alt="">
+                            <div class="texto-oculto">
+                                Mangá
+                            </div>
+                        </div>
+                    </aside>
+                </article>
+            </section>
+            <aside class="lateral">
+                <img src="Imagens/isso.jpg" alt="">
+            </aside>
+        </main>
+        <footer>
+            <h2 style="font-family: Georgia, 'Times New Roman', Times, serif; font-size: 150%;"><center>LANÇAMENTO DA TERCERIA TEMPORADA DIA 25 DE SETEMBRO</center></h2>
+        </footer>
+    </body>
+</html>
+<!--
+aside que passa por cima: curiosidade foi inspirado em um mangá
+
+-->

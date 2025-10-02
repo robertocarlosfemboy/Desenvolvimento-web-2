@@ -1,0 +1,39 @@
+body{
+    background-image: linear-gradient( to left, #feb2c7,  #fe93af, #fe8c7e, #fea36d, #f1bb31, #ffcf3d, #ffd453);
+}
+header{
+    margin-left: 2%;
+    margin-right: 2%;
+    margin-top: 6%;
+    margin-bottom: 1%;
+    display: flex;
+}
+nav{
+    margin-left: 2%;
+    margin-bottom: 2%;
+    border: solid #f1bb31;
+    display: inline;
+}
+.botao{
+    margin-top: 2%;
+}
+.quadrado{
+    margin-top: 1%;
+    margin-left: 10%;   
+    margin-right: 10%;
+    margin-bottom: 4%;
+    background-color: #ffffff;
+}
+main{
+    display: flex;
+    margin-right: 2%;
+}
+.textos{
+    display: inline;
+}
+.textos2{
+    display: flex;
+}
+article{
+    text-indent: 6%;
+}

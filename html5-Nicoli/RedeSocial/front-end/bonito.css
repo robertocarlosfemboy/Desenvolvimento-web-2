@@ -1,0 +1,43 @@
+body{
+    background-image: linear-gradient( to right, #feb2c7,  #fe93af, #fe8c7e, #fea36d, #f1bb31, #ffcf3d, #ffd453);
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+aside{
+    display: inline;
+}
+.posicaoTitulo{
+    text-align: center;
+    margin-top: 5%;
+}
+.posicaoTexto{
+    text-align: center;
+    margin-bottom: 5%;
+}
+.quadrado{
+    margin-top: 2%;
+    margin-left: 15%;   
+    margin-right: 15%;
+    margin-bottom: 4%;
+    border-radius: 15px;
+    background-color: #ffffffcc;
+}
+.quadradoCadastro{
+    text-align: center;
+    margin-top: 1%;
+    margin-left: 38%;   
+    margin-right: 38%;
+    margin-bottom: 10%;
+    padding: 1%;
+    border-radius: 15px;
+    background-color: #ffffff;
+}
+.titulo{
+    margin-top: 0%;
+}
+.opcoesCadastro{
+    display: inline;
+}
+input{
+    margin-top: 1.5%;
+    margin-bottom: 2%;
+}
